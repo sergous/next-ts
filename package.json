@@ -1,16 +1,31 @@
 {
-    "standard": {
-        "parser": "babel-eslint"
-    },
-    "scripts": {
-        "dev": "next",
-        "build": "next build",
-        "start": "NODE_ENV=production next start",
-        "lint": "standard"
-    },
-    "dependencies": {
-        "next": "^7.0.2",
-        "react": "^16.6.3",
-        "react-dom": "^16.6.3"
-    }
+  "standard": {
+    "parser": "babel-eslint"
+  },
+  "scripts": {
+    "dev": "node server.js",
+    "build": "next build ./src",
+    "start": "NODE_ENV=production next server.js",
+    "lint": "tslint \"src/**/*.{ts,tsx}\"",
+    "prettier": "find ./src -type f | xargs prettier --write",
+    "pre-commit": [
+      "prettier",
+      "lint"
+    ]
+  },
+  "dependencies": {
+    "mobx": "^5.7.0",
+    "mobx-react": "^5.4.2",
+    "mobx-state-tree": "^3.8.1",
+    "next": "^7.0.2",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3"
+  },
+  "devDependencies": {
+    "@zeit/next-typescript": "^1.1.1",
+    "pre-commit": "^1.2.2",
+    "prettier": "^1.15.3",
+    "tslint": "^5.11.0",
+    "typescript": "^3.2.1"
+  }
 }
