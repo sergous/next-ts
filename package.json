@@ -1,4 +1,5 @@
 {
+  "license": "ISC",
   "standard": {
     "parser": "babel-eslint"
   },
