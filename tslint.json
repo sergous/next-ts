@@ -1,11 +1,12 @@
 {
-    "extends": ["tslint:latest"],
-    "rules": {
-      "arrow-parens": false,
-      "interface-name": [true, "never-prefix"],
-      "no-object-literal-type-assertion": false,
-      "no-submodule-imports": false,
-      "semicolon": [true, "never"],
-      "trailing-comma": [true, {"multiline": "nerver", "singleline": "never"}]
-    }
+  "extends": ["tslint:latest"],
+  "rules": {
+    "arrow-parens": false,
+    "interface-name": [true, "never-prefix"],
+    "no-object-literal-type-assertion": false,
+    "no-submodule-imports": false,
+    "semicolon": [true, "never"],
+    "trailing-comma": [true, { "multiline": "nerver", "singleline": "never" }],
+    "ordered-imports": false
   }
+}

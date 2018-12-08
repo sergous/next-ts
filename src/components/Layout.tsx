@@ -1,4 +1,6 @@
 import Head from "next/head"
+import Link from "next/link"
+import { Menu } from "antd"
 
 export default ({ title = null, children = null }) => (
   <div>
@@ -12,6 +14,19 @@ export default ({ title = null, children = null }) => (
       />
     </Head>
     {title && <h1>{title}</h1>}
+
+    <Menu>
+      <Menu.Item>
+        <Link href="/about">
+          <a>About</a>
+        </Link>
+      </Menu.Item>
+      <Menu.Item>
+        <Link href="/contacts">
+          <a>Contacts</a>
+        </Link>
+      </Menu.Item>
+    </Menu>
     <div>{children}</div>
   </div>
 )
