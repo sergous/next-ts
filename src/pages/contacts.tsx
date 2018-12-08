@@ -1,1 +1,3 @@
-export default () => <p>Contacts page</p>
+import Layout from "../components/Layout"
+
+export default () => <Layout title="Contacts">Contacts page</Layout>

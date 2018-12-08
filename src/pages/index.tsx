@@ -1,8 +1,12 @@
+import Head from "next/head"
 import Link from "next/link"
+import Layout from "../components/Layout"
 
 export default () => (
-  <div>
-    Hello Next!
+  <Layout title="Hello Next!">
+    <Head>
+      <meta name="description" content="React Next with antd design template" />
+    </Head>
     <ul>
       <li>
         <Link href="/about">
@@ -15,5 +19,5 @@ export default () => (
         </Link>
       </li>
     </ul>
-  </div>
+  </Layout>
 )
